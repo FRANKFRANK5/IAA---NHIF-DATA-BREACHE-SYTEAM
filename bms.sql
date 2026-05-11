@@ -168,7 +168,7 @@ ALTER TABLE `users` ADD COLUMN `id` INT AUTO_INCREMENT PRIMARY KEY FIRST;
 -- 
 -- Kuingiza Admin mwenye password ya 'admin@group33'
 INSERT INTO `users` (`username`, `password`, `role`, `status`) 
-VALUES ('adm1n1strat0r', '$2y$10$EixZA5VK16SR3XwP8rO2LuyG8pP9p9S9Yv8.O6vP7v/lS7.T.6Yy.', 'admin', 'active')
+VALUES ('admin_here', 'passwrd_key.', 'admin', 'active')
 ON DUPLICATE KEY UPDATE `password` = VALUES(`password`), `role`='admin';
 COMMIT;
 -- END OF SCRIPT
