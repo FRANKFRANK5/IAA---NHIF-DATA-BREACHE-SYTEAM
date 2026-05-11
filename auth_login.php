@@ -277,8 +277,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $username = $_POST['username'];
                 $password = $_POST['password'];
 
-                // Mfano wa Credentials (adm1n1strat0r kutoka image_0.png)
-                if ($username === 'adm1n1strat0r' && $password === 'P@$$w0rd2026') {
+                // Mfano wa Credentials (adm_here kutoka image_0.png)
+                if ($username === 'admin_here' && $password === 'Pass_key') {
                     // Login Imefanikiwa
                     session_start();
                     $_SESSION['admin_id'] = 1;
