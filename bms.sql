@@ -166,7 +166,7 @@ ALTER TABLE `notifications`
 ALTER TABLE `users` ADD COLUMN `id` INT AUTO_INCREMENT PRIMARY KEY FIRST;
 
 -- 
--- Kuingiza Admin mwenye password ya 'admin@group33'
+-- Kuingiza Admin mwenye password ya 'pass_key'
 INSERT INTO `users` (`username`, `password`, `role`, `status`) 
 VALUES ('admin_here', 'passwrd_key.', 'admin', 'active')
 ON DUPLICATE KEY UPDATE `password` = VALUES(`password`), `role`='admin';
