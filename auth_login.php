@@ -277,8 +277,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $username = $_POST['username'];
                 $password = $_POST['password'];
 
-                // Mfano wa Credentials (adm_here kutoka image_0.png)
-                if ($username === 'admin_here' && $password === 'Pass_key') {
+                // Mfano wa Credentials (------------- kutoka image_0.png)
+                if ($username === '----------' && $password === 'Pass_key') {
                     // Login Imefanikiwa
                     session_start();
                     $_SESSION['admin_id'] = 1;
@@ -295,7 +295,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form action="auth_login.php" method="POST">
                 <div class="input-box">
                     <input type="text" name="username" required="required">
-                    <span>Administrator ID</span>
+                    <span>----------- ID</span>
                     <i class="fa-solid fa-user"></i>
                     <b></b>
                 </div>
