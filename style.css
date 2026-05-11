@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #1a2a3a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.header .logo span {
+  font-weight: 300;
+  color: #b3d4fc;
+}
+.user-info {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Layout */
+.container {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+.stats-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 180px;
+  border-left: 5px solid #003366;
+}
+.stat-card h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #5a6d80;
+  margin-bottom: 0.4rem;
+}
+.stat-card .number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+/* Filter bar */
+.filter-bar {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.filter-bar input, .filter-bar select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccd8e4;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.filter-bar input:focus, .filter-bar select:focus {
+  border-color: #003366;
+}
+.btn {
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #002244;
+}
+.btn-outline {
+  background: white;
+  border: 1px solid #003366;
+  color: #003366;
+}
+.btn-outline:hover {
+  background: #e6eff9;
+}
+
+/* Table */
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+th {
+  text-align: left;
+  padding: 1rem 1.2rem;
+  background: #f7f9fc;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #4a5c6c;
+  border-bottom: 2px solid #e9eef3;
+}
+td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #e9eef3;
+  font-size: 0.95rem;
+}
+tr:hover {
+  background: #f8faff;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.badge-critical {
+  background: #fee9e9;
+  color: #b71c1c;
+}
+.badge-high {
+  background: #fff3e0;
+  color: #c43d00;
+}
+.badge-medium {
+  background: #fff8e1;
+  color: #8d6e00;
+}
+.badge-low {
+  background: #e8f5e9;
+  color: #1e5f1e;
+}
+.action-link {
+  color: #003366;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+.modal h3 {
+  margin-bottom: 1rem;
+  color: #003366;
+}
+.modal .detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e6ed;
+  padding: 0.7rem 0;
+}
+.modal .detail-label {
+  font-weight: 600;
+  color: #4a5c6c;
+}
+.close-btn {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+ul.affected-list {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
